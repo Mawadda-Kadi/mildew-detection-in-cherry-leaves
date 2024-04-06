@@ -9,5 +9,6 @@ node_modules/
 cloudinary_python.txt
 kaggle.jsonvenv/
 kaggle.json
-inputs/cherry_leaves_dataset/cherry-leaves/healthy/
-inputs/cherry_leaves_dataset/cherry-leaves/powdery_mildew/
+inputs/cherry_leaves_dataset/cherry-leaves/train/
+inputs/cherry_leaves_dataset/cherry-leaves/test/
+inputs/cherry_leaves_dataset/cherry-leaves/validation/
