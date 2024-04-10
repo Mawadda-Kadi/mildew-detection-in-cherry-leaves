@@ -6,7 +6,7 @@ Welcome,
 
 This is the Code Institute student template for Codeanywhere. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions. Click the `Use this template` button above to get started.
 
-You can safely delete the Codeanywhere Template Instructions section of this README.md file,  and modify the remaining paragraphs for your own project. Please do read the Codeanywhere Template Instructions at least once, though! It contains some important information about the IDE and the extensions we use. 
+You can safely delete the Codeanywhere Template Instructions section of this README.md file,  and modify the remaining paragraphs for your own project. Please do read the Codeanywhere Template Instructions at least once, though! It contains some important information about the IDE and the extensions we use.
 
 ## How to use this repo
 
@@ -79,8 +79,65 @@ To save time in this process, the IT team suggested an ML system that detects in
 
 
 ## Dashboard Design
-* List all dashboard pages and their content, either blocks of information or widgets, like buttons, checkboxes, images, or any other items, that your dashboard library supports.
-* Finally, during the project development, you may revisit your dashboard plan to update a given feature (for example, at the beginning of the project, you were confident you would use a given plot to display an insight, but later, you chose another plot type).
+
+**Page 1: Quick Project Summary**
+
+**Quick Project Summary**
+
+**General Information**
+
+Powdery mildew is a fungal disease affecting many plant species, characterized by white powdery spots on leaves and stems. Early detection is crucial to manage and control the spread of this disease effectively.
+
+The project dataset contains high-resolution images of cherry leaves, categorized into healthy and powdery mildew-infected samples.
+
+**Project Dataset**
+
+The dataset consists of images categorized into two classes: healthy cherry leaves and leaves infected with powdery mildew. The detailed examination of these leaves allows for the development of a model capable of distinguishing between the two conditions.
+
+**Business Requirements**
+
+The client is interested in:
+1. Visually differentiating between healthy leaves and those infected with powdery mildew.
+2. Developing a method to accurately detect the presence of powdery mildew on cherry leaves.
+
+---
+
+**Page 2: Leaves Visualizer**
+
+To address the first business requirement, the interface will feature:
+- Checkbox 1: Display the average and variability images of healthy and infected leaves.
+- Checkbox 2: Show differences between average images of healthy and infected leaves.
+- Checkbox 3: Image montage to visualize a collection of leaves from each category.
+
+---
+
+**Page 3: Powdery Mildew Detection**
+
+For the second business requirement, create a user interface allowing users to upload cherry leaf images. The system will analyze each image and display:
+- The image.
+- A prediction statement indicating whether the leaf is infected with powdery mildew.
+- The probability associated with the prediction.
+
+A table will list the image names and prediction results, with a download button to export this data.
+
+---
+
+**Page 4: Project Hypothesis and Validation**
+
+Each project hypothesis will be outlined with a corresponding block detailing the conclusions and validation methods used to verify the hypothesis.
+
+---
+
+**Page 5: ML Prediction Metrics**
+
+This section will include:
+- Label frequencies for the training, validation, and test sets.
+- Model history, including accuracy and loss over epochs.
+- Model evaluation results with metrics such as precision_score, recall_score, f1_score.
+
+---
+
+This design document framework lays out how the project's objectives align with the client's needs, detailing the tools and methods used to achieve and validate these goals.
 
 
 ## Unfixed Bugs
@@ -89,7 +146,7 @@ To save time in this process, the IT team suggested an ML system that detects in
 ## Deployment
 ### Heroku
 
-* The App live link is: https://YOUR_APP_NAME.herokuapp.com/ 
+* The App live link is: https://YOUR_APP_NAME.herokuapp.com/
 * Set the runtime.txt Python version to a [Heroku-20](https://devcenter.heroku.com/articles/python-support#supported-runtimes) stack currently supported version.
 * The project was deployed to Heroku using the following steps.
 
@@ -98,19 +155,19 @@ To save time in this process, the IT team suggested an ML system that detects in
 3. Select your repository name and click Search. Once it is found, click Connect.
 4. Select the branch you want to deploy, then click Deploy Branch.
 5. The deployment process should happen smoothly if all deployment files are fully functional. Click now the button Open App on the top of the page to access your App.
-6. If the slug size is too large then add large files not required for the app to the .slugignore file. 
+6. If the slug size is too large then add large files not required for the app to the .slugignore file.
 
 
 ## Main Data Analysis and Machine Learning Libraries
 * Here you should list the libraries used in the project and provide an example(s) of how you used these libraries.
 
 
-## Credits 
+## Credits
 
-* In this section, you need to reference where you got your content, media and from where you got extra help. It is common practice to use code from other repositories and tutorials. However, it is necessary to be very specific about these sources to avoid plagiarism. 
-* You can break the credits section up into Content and Media, depending on what you have included in your project. 
+* In this section, you need to reference where you got your content, media and from where you got extra help. It is common practice to use code from other repositories and tutorials. However, it is necessary to be very specific about these sources to avoid plagiarism.
+* You can break the credits section up into Content and Media, depending on what you have included in your project.
 
-### Content 
+### Content
 
 - The text for the Home page was taken from Wikipedia Article A.
 - Instructions on how to implement form validation on the Sign-Up page were taken from [Specific YouTube Tutorial](https://www.youtube.com/).
