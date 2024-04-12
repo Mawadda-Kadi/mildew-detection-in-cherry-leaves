@@ -193,16 +193,19 @@ This design document framework lays out how the project's objectives align with 
 ## Deployment
 ### Heroku
 
-* The App live link is: https://YOUR_APP_NAME.herokuapp.com/
-* Set the runtime.txt Python version to a [Heroku-20](https://devcenter.heroku.com/articles/python-support#supported-runtimes) stack currently supported version.
-* The project was deployed to Heroku using the following steps.
+The steps needed to deploy this projects are as follows:
 
-1. Log in to Heroku and create an App
-2. At the Deploy tab, select GitHub as the deployment method.
-3. Select your repository name and click Search. Once it is found, click Connect.
-4. Select the branch you want to deploy, then click Deploy Branch.
-5. The deployment process should happen smoothly if all deployment files are fully functional. Click now the button Open App on the top of the page to access your App.
-6. If the slug size is too large then add large files not required for the app to the .slugignore file.
+1. Create a requirement.txt file in GitHub, for Heroku to read, listing the dependencies the program needs in order to run.
+2. Ensure that you select a version that is compatible with your application's requirements. Visit the [Heroku documentation](https://devcenter.heroku.com/articles/python-support).
+3. push the recent changes to GitHub and go to your Heroku account page to create and deploy the app running the project.
+4. Chose "CREATE NEW APP", give it a unique name, and select a geographical region.
+5. Add heroku/python buildpack from the Settings tab.
+6. From the Deploy tab, chose GitHub as deployment method, connect to GitHub and select the project's repository.
+7. Select the branch you want to deploy, then click Deploy Branch.
+8. Click to "Enable Automatic Deploys " or chose to "Deploy Branch" from the Manual Deploy section.
+9. Wait for the logs to run while the dependencies are installed and the app is being built.
+10. The mock terminal is then ready and accessible from a link similar to https://your-projects-name.herokuapp.com/
+11. If the slug size is too large then add large files not required for the app to the .slugignore file.
 
 
 ## Main Data Analysis and Machine Learning Libraries
