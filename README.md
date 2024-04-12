@@ -1,70 +1,39 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+#  Cherry Powdery Mildew Detector
 
-## Codeanywhere Template Instructions
+---
 
-Welcome,
+### Table of Contents
+1. [Dataset Overview](#dataset-overview)
+2. [Business Requirements](#business-requirements)
+3. [Hypothesis and Validation](#hypothesis-and-validation)
+4. [Rationale for the Model](#rationale-for-the-model)
+5. [Implementation of the Business Requirements](#implementation-of-the-business-requirements)
+6. [ML Business Case](#ml-business-case)
+7. [CRISP-DM Process](#crisp-dm-process)
+8. [Dashboard Design](#dashboard-design)
+9. [Unfixed Bugs](#unfixed-bugs)
+10. [Deployment](#deployment)
+11. [Technologies Used](#technologies-used)
+12. [Credits](#credits)
 
-This is the Code Institute student template for Codeanywhere. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions. Click the `Use this template` button above to get started.
+---
 
-You can safely delete the Codeanywhere Template Instructions section of this README.md file,  and modify the remaining paragraphs for your own project. Please do read the Codeanywhere Template Instructions at least once, though! It contains some important information about the IDE and the extensions we use.
+## Dataset Overview
+* The dataset utilized in this project originates from [Kaggle](https://www.kaggle.com/codeinstitute/cherry-leaves) and forms the basis for a hypothetical scenario demonstrating how predictive analytics can be implemented effectively in real-world projects.
+* Comprising over 4,000 images, the dataset features photographs of cherry leaves collected directly from the client's agricultural fields. These images include representations of both healthy leaves and those afflicted with powdery mildew—a common fungal disease that impacts a variety of plants. Given that cherry crops represent a significant aspect of the client's product lineup, there is a pressing concern regarding the potential delivery of products of diminished quality to the market due to this disease.
 
-## How to use this repo
-
-1. Use this template to create your GitHub project repo
-
-1. Log into <a href="https://app.codeanywhere.com/" target="_blank" rel="noreferrer">CodeAnywhere</a> with your GitHub account.
-
-1. On your Dashboard, click on the New Workspace button
-
-1. Paste in the URL you copied from GitHub earlier
-
-1. Click Create
-
-1. Wait for the workspace to open. This can take a few minutes.
-
-1. Open a new terminal and <code>pip3 install -r requirements.txt</code>
-
-1. In the terminal type <code>pip3 install jupyter</code>
-
-1. In the terminal type <code>jupyter notebook --NotebookApp.token='' --NotebookApp.password=''</code> to start the jupyter server.
-
-1. Open port 8888 preview or browser
-
-1. Open the jupyter_notebooks directory in the jupyter webpage that has opened and click on the notebook you want to open.
-
-1. Click the button Not Trusted and choose Trust.
-
-Note that the kernel says Python 3. It inherits from the workspace so it will be Python-3.8.12 as installed by our template. To confirm this you can use <code>! python --version</code> in a notebook code cell.
-
-
-## Cloud IDE Reminders
-
-To log into the Heroku toolbelt CLI:
-
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you, so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
-
-
-## Dataset Content
-* The dataset is sourced from [Kaggle](https://www.kaggle.com/codeinstitute/cherry-leaves). We then created a fictitious user story where predictive analytics can be applied in a real project in the workplace.
-* The dataset contains +4 thousand images taken from the client's crop fields. The images show healthy cherry leaves and cherry leaves that have powdery mildew, a fungal disease that affects many plant species. The cherry plantation crop is one of the finest products in their portfolio, and the company is concerned about supplying the market with a compromised quality product.
-
-
+---
 
 ## Business Requirements
-The cherry plantation crop from Farmy & Foods is facing a challenge where their cherry plantations have been presenting powdery mildew. Currently, the process is manual verification if a given cherry tree contains powdery mildew. An employee spends around 30 minutes in each tree, taking a few samples of tree leaves and verifying visually if the leaf tree is healthy or has powdery mildew. If there is powdery mildew, the employee applies a specific compound to kill the fungus. The time spent applying this compound is 1 minute.  The company has thousands of cherry trees, located on multiple farms across the country. As a result, this manual process is not scalable due to the time spent in the manual process inspection.
+The cherry crop from Farmy & Foods is currently experiencing issues with powdery mildew infestation. The existing approach to manage this involves manual inspections where an employee examines each cherry tree for about 30 minutes, sampling leaves to determine their health status. If powdery mildew is detected, it takes an additional minute per tree to apply a fungicidal treatment. With thousands of cherry trees spread across various farms nationwide, this manual method is inefficient and not feasible at scale.
 
-To save time in this process, the IT team suggested an ML system that detects instantly, using a leaf tree image, if it is healthy or has powdery mildew. A similar manual process is in place for other crops for detecting pests, and if this initiative is successful, there is a realistic chance to replicate this project for all other crops. The dataset is a collection of cherry leaf images provided by Farmy & Foods, taken from their crops.
+In an effort to streamline this process, the IT team has proposed the implementation of a machine learning (ML) system capable of instantly determining the health of a cherry leaf from an image. This system aims to replace the time-consuming manual inspections. This initiative, if successful, holds potential for adaptation to other crops within the company that require pest detection. The dataset used for this purpose includes a variety of cherry leaf images collected by Farmy & Foods from their orchards.
 
 
 * 1 - The client is interested in conducting a study to visually differentiate a healthy cherry leaf from one with powdery mildew.
 * 2 - The client is interested in predicting if a cherry leaf is healthy or contains powdery mildew.
 
+---
 
 ## Hypothesis and how to validate?
 Creating and validating hypotheses is a fundamental part of scientific research and data analysis, especially in fields like machine learning.
@@ -112,18 +81,141 @@ The model trained without data augmentation achieved an accuracy of 99.88%, prec
 #### Conclusion
 The slight decrease in performance metrics for the augmented model suggests that while data augmentation introduces more variability and robustness against overfitting, in this case, the original data set might already be sufficient or well-representative of the problem space, leading to high performance even without augmentation. Given the high precision in both models, false positives were effectively minimized. The augmented model showed a minor reduction in recall and F1 score, indicating a slightly lower ability to detect all positive cases.
 
+---
 
+## The Rationale to Map the Business Requirements to the Data Visualizations and ML Tasks
+The business requirements for this project were decomposed into several user stories, which were then translated into specific Machine Learning tasks. All tasks were manually tested and function as expected, ensuring that the system is both robust and user-friendly.
 
+**Business Requirement 1: Data Visualization**
+The client wants to visually distinguish a cherry leaf affected by powdery mildew from a healthy one.
 
+#### User Stories:
+- As a client, I want to navigate easily around an interactive dashboard to view and understand the data presented.
+- As a client, I want to display the "mean" and "standard deviation" images for cherry leaves that are healthy and those that contain powdery mildew, so that I can visually differentiate between the two.
+- As a client, I want to display the difference between an average healthy cherry leaf and one that contains powdery mildew, to enhance my ability to visually distinguish them.
+- As a client, I want to display an image montage for cherry leaves that are healthy and those that contain powdery mildew, to aid in visual differentiation.
 
+#### Implementation:
+- Developed a Streamlit-based dashboard with easy navigation and interactive visual elements (see Dashboard design for detailed presentation).
+- Calculated and displayed the difference between average images of infected and healthy leaves.
+- Generated "mean" and "standard deviation" images for both healthy and powdery mildew-infected leaves.
+- Implemented an image montage feature for displaying a variety of healthy and infected leaves.
 
-## The rationale to map the business requirements to the Data Visualisations and ML tasks
-* List your business requirements and a rationale to map them to the Data Visualisations and ML tasks.
+**Business Requirement 2: Classification**
+The client needs to determine whether a given cherry leaf is affected by powdery mildew.
 
+#### User Stories:
+- As a client, I want a ML model to predict with an accuracy of at least 86% whether a given cherry leaf is healthy or contains powdery mildew.
+
+#### Implementation:
+- The rationale for the ML model deployed is detailed in the "Hypothesis and Validation" section of the dashboard.
+- Enabled an uploader widget on the dashboard allowing clients to upload cherry leaf images in .jpeg format for instant evaluation.
+- The system can handle multiple images up to 200MB at once, displaying each uploaded image along with a prediction statement indicating if the leaf is infected with powdery mildew and the associated probability.
+
+#### Key Features:
+- Interactive data visualizations to facilitate user engagement and understanding.
+- Streamlined user interface on the dashboard for easy navigation and accessibility.
+- Comprehensive display of predictive results alongside visual data aids.
+- By addressing these user stories through carefully designed data visualization and machine learning tasks, this project not only meets the defined business requirements but also enhances the client's ability to make informed decisions based on robust data analysis and model predictions.
+
+---
 
 ## ML Business Case
-* In the previous bullet, you potentially visualised an ML task to answer a business requirement. You should frame the business case using the method we covered in the course.
 
+### Powdery Mildew Classifier for Cherry Leaves
+The objective is to develop a machine learning model capable of predicting whether a cherry leaf is infected with powdery mildew based on image analysis. This problem is classified as supervised learning, specifically a two-class, single-label classification model. The ultimate goal is to provide a tool that can aid farmers and agricultural specialists in quickly and accurately detecting powdery mildew, a common and damaging plant disease.
+
+**Ideal Outcome**:
+The primary outcome is to equip farmers with a reliable tool for early detection of powdery mildew, facilitating timely and effective disease management.
+
+**Model Success Metrics**:
+- **Accuracy**: Achieve at least 97% accuracy on the test set.
+- **Model Output**: The output is a binary flag coupled with a probability score, indicating the likelihood of powdery mildew presence on a leaf.
+
+**Heuristics**:
+- **Current Detection Method**: Traditionally, detection involves manual inspection of leaves by farmers, which is time-consuming (approximately 30 minutes per tree) and subject to human error. This method's limitations underscore the need for an automated solution.
+
+**Data Source**:
+- The model will be trained using a dataset provided by a collaborative agricultural project, consisting of 4208 images categorized into healthy and powdery mildew-infected cherry leaves.
+
+**Approach**:
+- **Data Preparation**: Utilize a TensorFlow-based CNN (Convolutional Neural Network) model with specified layers and hyperparameters designed to optimize performance for image classification tasks.
+- **Model Design**:
+  - **Convolutional Layers**: Capture spatial hierarchies in the images.
+  - **Global Average Pooling**: Reduces model complexity and computational load.
+  - **Regularization Techniques** (L2 regularization, Dropout): Prevent overfitting and enhance model generalization.
+- **Training Strategy**:
+  - **Learning Rate Scheduler**: Adjusts the learning rate based on training epochs to improve convergence.
+  - **Early Stopping**: Monitors validation loss to halt training when improvement stalls, preserving the best model state.
+
+#### Rationale Behind the Hyperparameter Choices in Data Modeling
+1. **Filters in Convolutional Layers:**
+   - **Configuration**: Started with 32 filters in the first layer and doubled to 64 in subsequent layers.
+   - **Rationale**: Increasing the number of filters in deeper layers allows the model to capture more complex features in the images. Starting with fewer filters helps in extracting basic features and gradually increasing allows the model to build up a more detailed understanding of the images.
+
+2. **Kernel Size:**
+   - **Configuration**: 3x3 for all convolutional layers.
+   - **Rationale**: A 3x3 kernel size is generally effective for capturing spatial hierarchies in image data. It strikes a good balance between capturing detail and computational efficiency.
+
+3. **Activation Function:**
+   - **Configuration**: ReLU (Rectified Linear Unit) for all hidden layers.
+   - **Rationale**: ReLU helps in introducing non-linearity to the model, enabling it to learn more complex patterns. It is also computationally efficient, which is beneficial given the high-resolution images in our dataset.
+
+4. **Dense Units:**
+   - **Configuration**: 64 units in the dense layer preceding the output.
+   - **Rationale**: Provides a sufficiently large, yet manageable number of neurons to process the features extracted by the convolutional layers, aiding in the final classification.
+
+5. **Dropout Rate:**
+   - **Configuration**: 0.5 in the dropout layer.
+   - **Rationale**: Dropout is used to prevent overfitting by randomly dropping units during training. A rate of 0.5 is aggressive yet commonly used, helping to significantly reduce overfitting while allowing enough capacity for learning.
+
+6. **Learning Rate and Scheduling:**
+   - **Configuration**: Starts with a default learning rate (adaptive based on the optimizer) and decreases exponentially after 10 epochs.
+   - **Rationale**: Starting with a higher learning rate allows the model to rapidly converge towards the general vicinity of the optimal solution. Reducing the learning rate as training progresses allows for finer adjustments, improving the model’s ability to reach the best possible solution.
+
+**Model Deployment**:
+- Users can upload images directly to an application interface, receiving immediate predictions.
+- The model processes images on the fly, ensuring fast and efficient performance suitable for real-time applications.
+
+This ML business case is structured to not only meet the immediate needs of the client by providing a high-accuracy diagnostic tool but also to advance the broader agricultural community's ability to manage plant health more effectively. The strategic use of machine learning here aims to replace slower, less reliable manual methods with a swift, scientific approach, thereby reducing the economic impact of plant diseases like powdery mildew on commercial crops.
+
+---
+
+## Cross-Industry Standard Process for Data Mining (CRISP-DM) in the Project
+The CRISP-DM methodology provides a structured approach to planning a data mining project. It is often used as a standard approach in data science to ensure successful outcomes. Here's how the phases of CRISP-DM align with the activities in your project on cherry leaf disease detection:
+
+### 1. Business Understanding
+- **Goal Identification**: The primary objective is to develop a model that can accurately differentiate between healthy cherry leaves and those infected with powdery mildew.
+- **Assessment of Current Situation**: The manual process of inspecting cherry leaves is time-consuming and prone to human error, necessitating an automated solution.
+
+### 2. Data Understanding
+- **Data Collection**: Images of cherry leaves, both healthy and infected, are sourced and organized for analysis.
+- **Data Exploration**: Initial data exploration is conducted in `1-data-collection.ipynb` where data is prepared, cleaned, and split into training, validation, and test sets.
+
+### 3. Data Preparation
+- **Data Cleaning**: Removing non-image files and handling any anomalies or corrupt data.
+- **Data Construction**: Creating training, validation, and test datasets with appropriate splits to ensure model generalization.
+- **Data Integration**: Merging data from multiple sources, if necessary, to create a comprehensive dataset for training.
+
+### 4. Modeling
+- **Model Selection**: Choosing appropriate machine learning algorithms. In this case, a convolutional neural network (CNN) is tailored for image classification tasks.
+- **Model Building**: Configuring the model with selected hyperparameters in `3-modelling-and-evaluating.ipynb`.
+- **Model Training**: Conducting the training process using augmented data to enhance model robustness.
+
+### 5. Evaluation
+- **Model Assessment**: Evaluating the model's performance on a hold-out test set to estimate how well it might perform in general when used to make predictions on new data.
+- **Performance Metrics**: Accuracy, precision, recall, F1 score, confusion matrix, and ROC curves are calculated to assess the quality of the model comprehensively.
+
+### 6. Deployment
+- **Deployment Planning**: Preparing for the deployment of the machine learning model in a production environment where it can be accessed by end-users, such as integration into a Streamlit dashboard.
+- **Monitoring and Maintenance**: Establishing a plan for regular updates and maintenance based on new data or changing conditions in disease detection criteria.
+
+### 7. Project Review
+- **Review Process**: Evaluating the entire process for efficiency and effectiveness, identifying any areas for improvement in future iterations of the model or data collection.
+- **Results Documentation**: Final documentation and reporting of the project outcomes, including insights gained and the potential business impact.
+
+This structured approach ensures that every aspect of the machine learning project is thoroughly planned, executed, and reviewed, leading to a robust solution that meets the business requirements effectively.
+---
 
 ## Dashboard Design
 
@@ -180,21 +272,21 @@ Each project hypothesis will be outlined with a corresponding block detailing th
 This section will include:
 - Label frequencies for the training, validation, and test sets.
 - Model history, including accuracy and loss over epochs.
-- Model evaluation results with metrics such as precision_score, recall_score, f1_score.
+- Model evaluation results with metrics such as precision_score, recall_score, f1_score, Confusion Matrix, and ROC curve.
 
 ---
 
 This design document framework lays out how the project's objectives align with the client's needs, detailing the tools and methods used to achieve and validate these goals.
 
+---
 
 ## Unfixed Bugs
 * You will need to mention unfixed bugs and why they were unfixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a significant variable for consideration, paucity of time and difficulty understanding implementation is not a valid reason to leave bugs unfixed.
+---
 
 ## Deployment
 ### Heroku
-
 The steps needed to deploy this projects are as follows:
-
 1. Create a requirement.txt file in GitHub, for Heroku to read, listing the dependencies the program needs in order to run.
 2. Ensure that you select a version that is compatible with your application's requirements. Visit the [Heroku documentation](https://devcenter.heroku.com/articles/python-support).
 3. push the recent changes to GitHub and go to your Heroku account page to create and deploy the app running the project.
@@ -207,10 +299,118 @@ The steps needed to deploy this projects are as follows:
 10. The mock terminal is then ready and accessible from a link similar to https://your-projects-name.herokuapp.com/
 11. If the slug size is too large then add large files not required for the app to the .slugignore file.
 
+---
 
-## Main Data Analysis and Machine Learning Libraries
-* Here you should list the libraries used in the project and provide an example(s) of how you used these libraries.
+## Technologies Used
+- **Python**: Used as the primary programming language for development, data manipulation, and machine learning.
+- **GitHub**: Employed for version control and source code management.
+- **Jupyter Notebook**: Utilized for interactive data collection, visualization, cleaning, as well as for model training and evaluation.
+- **Streamlit**: Deployed for building interactive and user-friendly dashboards.
+- **Heroku**: Chosen for hosting the application, allowing it to be accessed easily over the web.
+- **Chat GPT**: Used for troubleshooting
 
+### Main Data Analysis and Machine Learning Libraries
+This project utilizes several powerful data analysis and machine learning libraries to process data, train models, and evaluate results. Below is a list of the primary libraries used, along with examples of how they were applied throughout the project:
+
+### 1. **NumPy**
+- **Purpose**: Used for numerical operations on arrays and matrices.
+- **Example**: NumPy was used to convert images into arrays for model training and to perform transformations like normalization.
+
+```python
+import numpy as np
+# Convert PIL image to numpy array
+image_array = np.array(pil_image) / 255.0
+```
+
+### 2. **Pandas**
+- **Purpose**: Provides data manipulation and analysis tools.
+- **Example**: Pandas was employed to manage datasets, particularly for organizing and storing prediction results in a structured format.
+
+```python
+import pandas as pd
+# Create a DataFrame to store prediction results
+results_df = pd.DataFrame(data={'Image Name': image_names, 'Prediction': predictions})
+```
+
+### 3. **Matplotlib**
+- **Purpose**: A plotting library for creating static, interactive, and animated visualizations in Python.
+- **Example**: Used for plotting training and validation loss and accuracy graphs.
+
+```python
+import matplotlib.pyplot as plt
+# Plot training and validation accuracy
+plt.figure(figsize=(10, 6))
+plt.plot(history.history['accuracy'], label='Training Accuracy')
+plt.plot(history.history['val_accuracy'], label='Validation Accuracy')
+plt.title("Training and Validation Accuracy")
+plt.legend()
+plt.show()
+```
+
+### 4. **TensorFlow and Keras**
+- **Purpose**: TensorFlow is an end-to-end open-source platform for machine learning, and Keras is a high-level neural networks API running on top of TensorFlow.
+- **Example**: TensorFlow and Keras were used to build and train the deep learning models, handle data augmentation, and perform model evaluations.
+
+```python
+import tensorflow as tf
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense, Dropout
+
+# Define the model architecture
+model = Sequential([
+    Conv2D(32, (3, 3), activation='relu', input_shape=(100, 100, 3)),
+    MaxPooling2D(2, 2),
+    Conv2D(64, (3, 3), activation='relu'),
+    MaxPooling2D(2, 2),
+    Flatten(),
+    Dense(64, activation='relu'),
+    Dropout(0.5),
+    Dense(1, activation='sigmoid')
+])
+
+# Compile the model
+model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
+```
+
+### 5. **Scikit-Learn**
+- **Purpose**: Offers simple and efficient tools for predictive data analysis.
+- **Example**: Used for generating classification reports and confusion matrices to evaluate model performance.
+
+```python
+from sklearn.metrics import classification_report, confusion_matrix
+
+# Calculate metrics
+y_pred = model.predict_classes(test_set)
+print(classification_report(test_set.classes, y_pred))
+print(confusion_matrix(test_set.classes, y_pred))
+```
+
+### 6. **Streamlit**
+- **Purpose**: Streamlit is an open-source app framework specifically for Machine Learning and Data Science teams to create beautiful, interactive web apps quickly and with minimal code.
+- **Example**: In this project, Streamlit was used extensively to build an interactive dashboard that allows users to upload cherry leaf images, view model predictions, and navigate through different data visualizations.
+
+```python
+import streamlit as st
+
+def page_project_summary_body():
+    st.title("Cherry Leaves Powdery Mildew Detector")
+
+```
+
+### 7. **Seaborn**
+- **Purpose**: Seaborn is a Python data visualization library based on matplotlib that provides a high-level interface for drawing attractive and informative statistical graphics.
+- **Example**: In this project, Seaborn was utilized to create enhanced visualizations for comparing the distribution of healthy versus powdery mildew-infected cherry leaves, which helps in understanding the data better and making informed decisions.
+
+```python
+import seaborn as sns
+
+def plot_label_distribution(labels):
+    sns.set_theme(style="whitegrid")
+```
+
+These libraries form the backbone of the project's analytical and machine learning operations, facilitating a wide range of tasks from data preprocessing and model building to evaluation and visualization.
+
+---
 
 ## Credits
 
@@ -229,6 +429,7 @@ The steps needed to deploy this projects are as follows:
 - The images used for the gallery page were taken from this other open-source site.
 
 
-
-## Acknowledgements (optional)
+### Acknowledgements (optional)
 * Thank the people that provided support throughout this project.
+
+---
