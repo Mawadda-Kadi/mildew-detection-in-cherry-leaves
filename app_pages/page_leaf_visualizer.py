@@ -12,6 +12,11 @@ def page_leaf_visualizer_body():
         "The client is interested in conducting a study to visually differentiate a cherry leaf that is healthy from one that contains powdery mildew."
     )
 
+    st.info("""
+    For additional information, please visit and **read** the
+    [Project README file](https://github.com/Mawadda-Kadi/mildew-detection-in-cherry-leaves/blob/main/README.md)
+    """)
+
     version = 'v1'
     if st.checkbox("Difference between average and variability image"):
         avg_healthy = plt.imread(f"outputs/{version}/avg_var_healthy.png")

@@ -7,7 +7,7 @@ def page_project_summary_body():
     This function will be called in the main app script.
     """
 
-    st.title("Project Summary: Cherry Leaf Disease Detection")
+    st.write("### Project Summary: Cherry Leaf Disease Detection")
 
     st.info("""
     **General Information**\n
@@ -18,7 +18,7 @@ def page_project_summary_body():
     """)
 
 
-    st.header("Introduction")
+    st.write("#### Introduction")
     st.write("""
     This project aims to detect and classify cherry leaf diseases,
     focusing on distinguishing between healthy leaves and those affected
@@ -30,20 +30,20 @@ def page_project_summary_body():
     """)
 
 
-    st.header("Data Description")
+    st.write("#### Description")
     st.write("""
     The dataset consists of images of cherry leaves, categorized into healthy and powdery mildew-affected classes.
     These images are used to train and validate the performance of the predictive model.
     """)
 
-    st.write("""
+    st.info("""
     For additional information, please visit and **read** the
-    [Project README file](https://github.com/...."
+    [Project README file](https://github.com/Mawadda-Kadi/mildew-detection-in-cherry-leaves/blob/main/README.md)
     """)
 
 
-    st.header("The project has 2 business requirements:\n")
-    st.write("""
+    st.write("### The project has 2 business requirements:\n")
+    st.success("""
     The client is interested in:
     1. Visually differentiating between healthy leaves and those infected with powdery mildew.
     2. Developing a method to accurately detect the presence of powdery mildew on cherry leaves.

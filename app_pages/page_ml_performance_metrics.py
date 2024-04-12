@@ -26,7 +26,7 @@ def page_ml_performance_metrics_body():
     st.image(labels_distribution_image, caption="Labels Distribution")
 
     st.write("---")
-    
+
     col1, col2 = st.columns(2)
     with col1:
         # Model Training Accuracy
@@ -51,3 +51,8 @@ def page_ml_performance_metrics_body():
         st.image(roc_curve_image, caption="ROC Curve")
 
     st.write("---")
+
+    st.info("""
+    For additional information, please visit and **read** the
+    [Project README file](https://github.com/Mawadda-Kadi/mildew-detection-in-cherry-leaves/blob/main/README.md)
+    """)

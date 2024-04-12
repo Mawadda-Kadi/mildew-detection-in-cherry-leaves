@@ -1,13 +1,15 @@
 import streamlit as st
 
 def page_project_hypothesis_body():
-    st.title("Project Hypothesis and Validation")
+    st.write("### Project Hypothesis and Validation")
 
     # Hypothesis 1
-    st.header("1. Hypothesis on Image Resolution")
-    st.write("""
+    st.write("### 1. Hypothesis on Image Resolution")
+    st.success("""
     **Hypothesis**: Higher image resolution leads to better model accuracy in detecting powdery mildew in cherry leaves.
+    """)
 
+    st.write("""
     **Introduction**
     Investigating the influence of image resolution on the detection of powdery mildew in cherry leaves,
     we hypothesize that varying resolutions affect the model's detail capture and, consequently, its accuracy.
@@ -35,10 +37,12 @@ def page_project_hypothesis_body():
     st.write("---")
 
     # Hypothesis 2
-    st.header("2. Hypothesis on Data Augmentation")
+    st.write("### 2. Hypothesis on Data Augmentation")
+    st.success("""
+    **Hypothesis:** Applying data augmentation techniques improves the model's ability to generalize and increases its accuracy.
+    """)
+    
     st.write("""
-    **Hypothesis**: Applying data augmentation techniques improves the model's ability to generalize and increases its accuracy.
-
     **Introduction**
     This hypothesis examines whether data augmentation enhances the performance of a model trained to identify powdery mildew in cherry leaves.
 
@@ -63,5 +67,10 @@ def page_project_hypothesis_body():
     **Conclusion**
     - While data augmentation introduces more variability, the original dataset's representativeness might suffice, as indicated by high performance metrics.
     - Excessively high resolution doesn't markedly improve detection, highlighting the model's ability to generalize from the key features of the condition.
+    """)
+
+    st.info("""
+    For additional information, please visit and **read** the
+    [Project README file](https://github.com/Mawadda-Kadi/mildew-detection-in-cherry-leaves/blob/main/README.md)
     """)
 

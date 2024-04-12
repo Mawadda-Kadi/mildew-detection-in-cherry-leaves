@@ -264,7 +264,10 @@ This design document framework lays out how the project's objectives align with 
 
 ## Unfixed Bug
 - Prediction Inaccuracy: When uploading an image of a healthy cherry leaf, the system incorrectly predicts it as affected by powdery mildew. This issue may stem from model overfitting or insufficient representation of healthy leaves in the training data.
+
+**Example**
 ![healthy leaf](https://github.com/cla-cif/Cherry-Powdery-Mildew-Detector/assets/151715427/85712a4f-8fea-4066-8a5c-451dd3436a3d)
+
 The leaf is predicted to be powdery mildew with probability 0.84.
 
 ---

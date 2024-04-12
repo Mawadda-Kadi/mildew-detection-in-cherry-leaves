@@ -26,7 +26,12 @@ def page_powdery_mildew_detector_body():
     Function to display the powdery mildew detector page content.
     Allows users to upload images and see the model's predictions.
     """
-    st.title("Powdery Mildew Detection in Cherry Leaves")
+    st.write("### Powdery Mildew Detection in Cherry Leaves")
+
+    st.info("""
+    For additional information, please visit and **read** the
+    [Project README file](https://github.com/Mawadda-Kadi/mildew-detection-in-cherry-leaves/blob/main/README.md)
+    """)
 
     uploaded_file = st.file_uploader("Choose a cherry leaf image...", type=["jpg", "jpeg", "png"])
     if uploaded_file is not None:
