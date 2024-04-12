@@ -35,7 +35,7 @@ In an effort to streamline this process, the IT team has proposed the implementa
 
 ---
 
-## Hypothesis and how to validate?
+## Hypothesis and Validation
 Creating and validating hypotheses is a fundamental part of scientific research and data analysis, especially in fields like machine learning.
 
 ### 1. Hypothesis on Image Resolution
@@ -181,7 +181,7 @@ This ML business case is structured to not only meet the immediate needs of the 
 
 ---
 
-## Cross-Industry Standard Process for Data Mining (CRISP-DM) in the Project
+## CRISP-DM Process
 The CRISP-DM methodology provides a structured approach to planning a data mining project. It is often used as a standard approach in data science to ensure successful outcomes. Here's how the phases of CRISP-DM align with the activities in your project on cherry leaf disease detection:
 
 ### 1. Business Understanding
@@ -215,73 +215,58 @@ The CRISP-DM methodology provides a structured approach to planning a data minin
 - **Results Documentation**: Final documentation and reporting of the project outcomes, including insights gained and the potential business impact.
 
 This structured approach ensures that every aspect of the machine learning project is thoroughly planned, executed, and reviewed, leading to a robust solution that meets the business requirements effectively.
+
 ---
 
 ## Dashboard Design
 
-**Page 1: Quick Project Summary**
+### **Page 1: Quick Project Summary**
 
 **Quick Project Summary**
 
 **General Information**
-
 Powdery mildew is a fungal disease affecting many plant species, characterized by white powdery spots on leaves and stems. Early detection is crucial to manage and control the spread of this disease effectively.
-
 The project dataset contains high-resolution images of cherry leaves, categorized into healthy and powdery mildew-infected samples.
 
 **Project Dataset**
-
 The dataset consists of images categorized into two classes: healthy cherry leaves and leaves infected with powdery mildew. The detailed examination of these leaves allows for the development of a model capable of distinguishing between the two conditions.
 
 **Business Requirements**
-
 The client is interested in:
 1. Visually differentiating between healthy leaves and those infected with powdery mildew.
 2. Developing a method to accurately detect the presence of powdery mildew on cherry leaves.
 
----
-
-**Page 2: Leaves Visualizer**
-
+### **Page 2: Leaves Visualizer**
 To address the first business requirement, the interface will feature:
 - Checkbox 1: Display the average and variability images of healthy and infected leaves.
 - Checkbox 2: Show differences between average images of healthy and infected leaves.
 - Checkbox 3: Image montage to visualize a collection of leaves from each category.
 
----
-
-**Page 3: Powdery Mildew Detection**
-
+### **Page 3: Powdery Mildew Detection**
 For the second business requirement, create a user interface allowing users to upload cherry leaf images. The system will analyze each image and display:
 - The image.
 - A prediction statement indicating whether the leaf is infected with powdery mildew.
 - The probability associated with the prediction.
+- A table will list the image names and prediction results, with a download button to export this data.
 
-A table will list the image names and prediction results, with a download button to export this data.
-
----
-
-**Page 4: Project Hypothesis and Validation**
-
+### **Page 4: Project Hypothesis and Validation**
 Each project hypothesis will be outlined with a corresponding block detailing the conclusions and validation methods used to verify the hypothesis.
 
----
-
-**Page 5: ML Prediction Metrics**
-
+### **Page 5: ML Prediction Metrics**
 This section will include:
 - Label frequencies for the training, validation, and test sets.
 - Model history, including accuracy and loss over epochs.
 - Model evaluation results with metrics such as precision_score, recall_score, f1_score, Confusion Matrix, and ROC curve.
 
----
-
 This design document framework lays out how the project's objectives align with the client's needs, detailing the tools and methods used to achieve and validate these goals.
 
 ---
 
-## Unfixed Bugs
-* You will need to mention unfixed bugs and why they were unfixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a significant variable for consideration, paucity of time and difficulty understanding implementation is not a valid reason to leave bugs unfixed.
+## Unfixed Bug
+- Prediction Inaccuracy: When uploading an image of a healthy cherry leaf, the system incorrectly predicts it as affected by powdery mildew. This issue may stem from model overfitting or insufficient representation of healthy leaves in the training data.
+![healthy leaf](https://github.com/cla-cif/Cherry-Powdery-Mildew-Detector/assets/151715427/85712a4f-8fea-4066-8a5c-451dd3436a3d)
+The leaf is predicted to be powdery mildew with probability 0.84.
+
 ---
 
 ## Deployment
@@ -415,7 +400,6 @@ These libraries form the backbone of the project's analytical and machine learni
 ## Credits
 
 #### Educational Sources:
-
 - [Code Institute Lessons](https://learn.codeinstitute.net/ci_program/diplomainsoftwaredevelopmentpredictiveanalytics)
 - [Kaggle Documentation](https://www.kaggle.com/docs)
 - [Matplotlib Tutorial](https://www.w3schools.com/python/matplotlib_intro.asp)
@@ -438,13 +422,12 @@ These libraries form the backbone of the project's analytical and machine learni
 - [How to Calculate Precision, Recall, F1, and More for Deep Learning Models](https://machinelearningmastery.com/how-to-calculate-precision-recall-f1-and-more-for-deep-learning-models/)
 
 #### Content:
-
-- I implemented similar structure from [cla-cif/Cherry-Powdery-Mildew-Detector](https://github.com/cla-cif/Cherry-Powdery-Mildew-Detector/blob/main/README.md)
+- I implemented similar README file structure from [cla-cif/Cherry-Powdery-Mildew-Detector](https://github.com/cla-cif/Cherry-Powdery-Mildew-Detector/blob/main/README.md)
 - Project Summary page Content from [Identification of Cherry Leaf Disease Infected by Podosphaera Pannosa via Convolutional Neural Network](https://www.researchgate.net/publication/331252859_Identification_of_Cherry_Leaf_Disease_Infected_by_Podosphaera_Pannosa_via_Convolutional_Neural_Network)
 
 #### Media:
-
-Dataset from [Kaggle](https://www.kaggle.com/codeinstitute/cherry-leaves)
+- Dataset from [Kaggle](https://www.kaggle.com/codeinstitute/cherry-leaves)
+- Healthy Leaf Image in README file from [Creative Market](https://creativemarket.com/AnatoliySadovskiy/736161-Sweet-cherry-leaf)
 
 #### Code:
 I adapted code from [Code-Institute-Org/WalkthroughProject01](https://github.com/Code-Institute-Org/WalkthroughProject01) for the following:
