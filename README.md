@@ -67,7 +67,54 @@ To save time in this process, the IT team suggested an ML system that detects in
 
 
 ## Hypothesis and how to validate?
-* List here your project hypothesis(es) and how you envision validating it (them).
+Creating and validating hypotheses is a fundamental part of scientific research and data analysis, especially in fields like machine learning.
+
+### 1. Hypothesis on Image Resolution
+**Hypothesis**: Higher image resolution leads to better model accuracy in detecting powdery mildew in cherry leaves.
+
+#### Introduction
+Investigating the influence of image resolution on the detection of powdery mildew in cherry leaves, we hypothesize that varying resolutions affect the model's detail capture and, consequently, its accuracy.
+
+#### How to Validate:
+- **Set up distinct resolutions**: Define three categories for image resolution — low (64x64), medium (128x128), and high (256x256).
+- **Prepare the data**: Use `ImageDataGenerator` to process images from the dataset into these three resolutions for training and testing the model.
+- **Train separate models**: For each resolution category, train a model with the same architecture and hyperparameters to ensure consistency in comparison.
+- **Evaluate performance**: Test each model on a separate validation set that is consistent across all resolutions to measure and compare accuracy, precision, recall, and F1 score.
+- **Analyze results**: Document the performance metrics for each resolution to identify patterns or changes in model behavior as image detail varies.
+- **Draw conclusions**: Based on the comparative analysis, conclude which resolution provides the optimal balance between detail capture and computational efficiency for detecting powdery mildew in cherry leaves.
+
+#### Observation
+Testing across different resolutions showed all provided high accuracy, with very slight improvements in medium and high settings.
+
+Accuracy by resolution: {'low': 0.9952606558799744, 'medium': 0.9964454770088196, 'high': 0.9964454770088196}
+
+
+#### Conclusion
+The model effectively identifies powdery mildew at varying resolutions, indicating a good balance between detail recognition and computational efficiency. Excessively high resolution doesn't markedly improve detection, highlighting the model's ability to generalize from the key features of the condition.
+
+
+### 2. Hypothesis on Data Augmentation
+**Hypothesis**: Applying data augmentation techniques improves the model's ability to generalize and increases its accuracy in detecting powdery mildew.
+
+#### Introduction
+This hypothesis examines whether data augmentation enhances the performance of a model trained to identify powdery mildew in cherry leaves. Data augmentation artificially expands the training set with transformed versions of images, potentially improving the model's robustness and ability to generalize.
+
+#### How to Validate
+- **Generate augmented and non-augmented datasets**: Use `ImageDataGenerator` to create two sets of data from the training path, one with augmentation (rotation, shift, shear, zoom, flip) and one without.
+- **Train models separately**: Build and train two identical models, one on each dataset, maintaining the same architecture and training conditions.
+- **Evaluate performance**: Test both models on an untouched test set, comparing key metrics such as accuracy, precision, recall, and F1 score.
+- **Analyze results**: Check if the augmented data model performs better in terms of accuracy, precision, recall, and F1 score.
+- **Draw conclusions**: Assess whether data augmentation leads to a statistically significant improvement in model performance.
+
+#### Observation
+The model trained without data augmentation achieved an accuracy of 99.88%, precision of 100%, recall of 99.76%, and F1 score of 99.88%. In contrast, the model trained with augmentation showed an accuracy of 99.53%, precision of 100%, recall of 99.05%, and F1 score of 99.52%. Both models exhibited high performance, but the non-augmented model scored slightly higher in all metrics except precision, which remained perfect in both cases.
+
+#### Conclusion
+The slight decrease in performance metrics for the augmented model suggests that while data augmentation introduces more variability and robustness against overfitting, in this case, the original data set might already be sufficient or well-representative of the problem space, leading to high performance even without augmentation. Given the high precision in both models, false positives were effectively minimized. The augmented model showed a minor reduction in recall and F1 score, indicating a slightly lower ability to detect all positive cases.
+
+
+
+
 
 
 ## The rationale to map the business requirements to the Data Visualisations and ML tasks
