@@ -414,20 +414,45 @@ These libraries form the backbone of the project's analytical and machine learni
 
 ## Credits
 
-* In this section, you need to reference where you got your content, media and from where you got extra help. It is common practice to use code from other repositories and tutorials. However, it is necessary to be very specific about these sources to avoid plagiarism.
-* You can break the credits section up into Content and Media, depending on what you have included in your project.
+#### Educational Sources:
 
-### Content
+- [Code Institute Lessons](https://learn.codeinstitute.net/ci_program/diplomainsoftwaredevelopmentpredictiveanalytics)
+- [Kaggle Documentation](https://www.kaggle.com/docs)
+- [Matplotlib Tutorial](https://www.w3schools.com/python/matplotlib_intro.asp)
+- [TensorFlow Core](https://www.tensorflow.org/guide)
+- [Scikit Learn User Guide](https://scikit-learn.org/stable/user_guide.html)
+- [ResNet-50: The Basics and a Quick Tutorial](https://datagen.tech/guides/computer-vision/resnet-50/)
+- [How to Build a Machine Learning Model](https://towardsdatascience.com/how-to-build-a-machine-learning-model-439ab8fb3fb1)
+- [A Complete Guide to Data Augmentation](https://www.datacamp.com/tutorial/complete-guide-data-augmentation)
+- [Machine Learning - Data Distribution](https://www.w3schools.com/python/python_ml_data_distribution.asp)
+- [Machine Learning - Train/Test](https://www.w3schools.com/python/python_ml_train_test.asp)
+- [Machine Learning - AUC - ROC Curve](https://www.w3schools.com/python/python_ml_auc_roc.asp)
+- [Machine Learning - Confusion Matrix](https://www.w3schools.com/python/python_ml_confusion_matrix.asp)
+- [Hypothesis in Machine Learning](https://www.geeksforgeeks.org/ml-understanding-hypothesis/)
+- [CNN | Introduction to Padding](https://www.geeksforgeeks.org/cnn-introduction-to-padding/?ref=ml_lbp)
+- [CNN | Introduction to Pooling Layer](https://www.geeksforgeeks.org/cnn-introduction-to-pooling-layer/?ref=lbp)
+- [CIFAR-10 Image Classification in TensorFlow](https://www.geeksforgeeks.org/cifar-10-image-classification-in-tensorflow/?ref=lbp)
+- [How to Convert Images to NumPy Arrays and Back](https://machinelearningmastery.com/how-to-load-and-manipulate-images-for-deep-learning-in-python-with-pil-pillow/#:~:text=With%20Pillow%20installed%2C%20you%20can,of%20pixels%20as%20an%20image.)
+- [Using Learning Rate Scheduler and Early Stopping with PyTorch](https://debuggercafe.com/using-learning-rate-scheduler-and-early-stopping-with-pytorch/)
+- [F1 Score in Machine Learning: Intro & Calculation](https://www.v7labs.com/blog/f1-score-guide#:~:text=for%20Machine%20Learning-,What%20is%20F1%20score%3F,prediction%20across%20the%20entire%20dataset.)
+- [How to Calculate Precision, Recall, F1, and More for Deep Learning Models](https://machinelearningmastery.com/how-to-calculate-precision-recall-f1-and-more-for-deep-learning-models/)
 
-- The text for the Home page was taken from Wikipedia Article A.
-- Instructions on how to implement form validation on the Sign-Up page were taken from [Specific YouTube Tutorial](https://www.youtube.com/).
-- The icons in the footer were taken from [Font Awesome](https://fontawesome.com/).
+#### Content:
 
-### Media
+- I implemented similar structure from [cla-cif/Cherry-Powdery-Mildew-Detector](https://github.com/cla-cif/Cherry-Powdery-Mildew-Detector/blob/main/README.md)
+- Project Summary page Content from [Identification of Cherry Leaf Disease Infected by Podosphaera Pannosa via Convolutional Neural Network](https://www.researchgate.net/publication/331252859_Identification_of_Cherry_Leaf_Disease_Infected_by_Podosphaera_Pannosa_via_Convolutional_Neural_Network)
 
-- The photos used on the home and sign-up page are from This Open-Source site.
-- The images used for the gallery page were taken from this other open-source site.
+#### Media:
 
+Dataset from [Kaggle](https://www.kaggle.com/codeinstitute/cherry-leaves)
+
+#### Code:
+I adapted code from [Code-Institute-Org/WalkthroughProject01](https://github.com/Code-Institute-Org/WalkthroughProject01) for the following:
+- Data Collection and Preparation
+- Image Contrast Analysis: Used for creating contrast plots to differentiate between healthy and powdery mildew-infected cherry leaves
+- Image Montage Creation
+- Data Augmentation
+- Data Prediction: Adapted to implement model inference for evaluating individual images for signs of powdery mildew
 
 ### Acknowledgements (optional)
 * Thank the people that provided support throughout this project.
