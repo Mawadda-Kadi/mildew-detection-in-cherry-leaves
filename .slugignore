@@ -4,3 +4,4 @@ inputs/cherry_leaves_dataset/cherry-leaves/test
 inputs/cherry_leaves_dataset/cherry-leaves/train
 jupyter_notebooks/*
 outputs/v1/image_embeddings.joblib
+requirements-dev.txt
