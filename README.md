@@ -303,6 +303,14 @@ This design document framework lays out how the project's objectives align with 
   4. Check the prediction output to see if it accurately identifies the leaf's health status.
   5. Verify that the probability score is displayed alongside the prediction.
   6. Check that the README link is clickable and direct to the correct page.
+- **Demonstrating instances where the model correctly identifies unseen data for both healthy and powdery mildew-infected cherry leaves**
+
+![healthy2-correct pred](https://github.com/Mawadda-Kadi/mildew-detection-in-cherry-leaves/assets/151715427/56b10e08-85be-4dbc-886a-ae120df7506c)
+![healthy1-correct pred](https://github.com/Mawadda-Kadi/mildew-detection-in-cherry-leaves/assets/151715427/56965e5e-f94d-4c2b-ba5e-37b092185f9e)
+
+![pm1-correct pred](https://github.com/Mawadda-Kadi/mildew-detection-in-cherry-leaves/assets/151715427/2237f562-9398-4765-858c-368dcb26fce3)
+![pm2-correct pred](https://github.com/Mawadda-Kadi/mildew-detection-in-cherry-leaves/assets/151715427/ea556bf6-0334-416f-b69f-571d6079ae00)
+
 
 ### Project Hypothesis and Validation
 - **Objective**: Check the presentation of hypotheses and their validation.
@@ -326,7 +334,9 @@ All the pages and features of the dashboard have been thoroughly manually tested
 ---
 
 ## Unfixed Bug
-- Prediction Inaccuracy: When uploading an image of a healthy cherry leaf, the system incorrectly predicts it as affected by powdery mildew. This issue may stem from model overfitting or insufficient representation of healthy leaves in the training data.
+- **Prediction Inaccuracy for Low-Quality Images on Unseen Data**: The system inaccurately predicts healthy cherry leaves as affected by powdery mildew when the uploaded images are of low quality and are unseen during training. This error may be due to the model's sensitivity to variations in image quality and its potential overfitting to the training data, affecting its generalization to new, real-world examples.
+
+![healthy3-wrong pred](https://github.com/Mawadda-Kadi/mildew-detection-in-cherry-leaves/assets/151715427/1e9c3c84-6e4f-4ddd-989f-e97b2ff13f5b)
 
 ---
 
@@ -503,7 +513,6 @@ These libraries form the backbone of the project's analytical and machine learni
 
 #### Media:
 - Dataset from [Kaggle](https://www.kaggle.com/codeinstitute/cherry-leaves)
-- Healthy Leaf Image in README file from [Creative Market](https://creativemarket.com/AnatoliySadovskiy/736161-Sweet-cherry-leaf)
 
 #### Code:
 I adapted code from [Code-Institute-Org/WalkthroughProject01](https://github.com/Code-Institute-Org/WalkthroughProject01) for the following:
