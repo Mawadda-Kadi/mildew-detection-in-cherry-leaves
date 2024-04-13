@@ -1,2 +1,5 @@
 README.md
 app_pages/__pycache__/*
+inputs/cherry_leaves_dataset/cherry-leaves/test
+inputs/cherry_leaves_dataset/cherry-leaves/train
+jupyter_notebooks/*

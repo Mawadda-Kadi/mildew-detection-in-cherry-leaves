@@ -305,11 +305,11 @@ This design document framework lays out how the project's objectives align with 
   6. Check that the README link is clickable and direct to the correct page.
 - **Demonstrating instances where the model correctly identifies unseen data for both healthy and powdery mildew-infected cherry leaves**
 
-![healthy2-correct pred](https://github.com/Mawadda-Kadi/mildew-detection-in-cherry-leaves/assets/151715427/56b10e08-85be-4dbc-886a-ae120df7506c)
-![healthy1-correct pred](https://github.com/Mawadda-Kadi/mildew-detection-in-cherry-leaves/assets/151715427/56965e5e-f94d-4c2b-ba5e-37b092185f9e)
+![healthy1-correct pred](https://github.com/Mawadda-Kadi/mildew-detection-in-cherry-leaves/assets/151715427/f7a078d8-711d-4e69-985a-3265398bded2)
+![healthy2-correct pred](https://github.com/Mawadda-Kadi/mildew-detection-in-cherry-leaves/assets/151715427/22f4321f-daf8-4971-a40a-82efba73fd63)
 
-![pm1-correct pred](https://github.com/Mawadda-Kadi/mildew-detection-in-cherry-leaves/assets/151715427/2237f562-9398-4765-858c-368dcb26fce3)
-![pm2-correct pred](https://github.com/Mawadda-Kadi/mildew-detection-in-cherry-leaves/assets/151715427/ea556bf6-0334-416f-b69f-571d6079ae00)
+![pm1-correct pred](https://github.com/Mawadda-Kadi/mildew-detection-in-cherry-leaves/assets/151715427/f746a320-cf6a-4e7d-9574-e93698dac34e)
+![pm2-correct pred](https://github.com/Mawadda-Kadi/mildew-detection-in-cherry-leaves/assets/151715427/11511865-d69c-4e27-98c7-3622bc5c16ae)
 
 
 ### Project Hypothesis and Validation
@@ -336,7 +336,7 @@ All the pages and features of the dashboard have been thoroughly manually tested
 ## Unfixed Bug
 - **Prediction Inaccuracy for Low-Quality Images on Unseen Data**: The system inaccurately predicts healthy cherry leaves as affected by powdery mildew when the uploaded images are of low quality and are unseen during training. This error may be due to the model's sensitivity to variations in image quality and its potential overfitting to the training data, affecting its generalization to new, real-world examples.
 
-![healthy3-wrong pred](https://github.com/Mawadda-Kadi/mildew-detection-in-cherry-leaves/assets/151715427/1e9c3c84-6e4f-4ddd-989f-e97b2ff13f5b)
+![healthy3-wrong pred](https://github.com/Mawadda-Kadi/mildew-detection-in-cherry-leaves/assets/151715427/b06901e2-7a76-45b4-bbd3-41454407a9a2)
 
 ---
 
