@@ -1,5 +1,7 @@
 #  Cherry Powdery Mildew Detector
 
+**Here is the Livesite:**
+[Cherry Powdery Mildew Detector]()
 ---
 
 ### Table of Contents
@@ -8,13 +10,15 @@
 3. [Hypothesis and Validation](#hypothesis-and-validation)
 4. [Rationale for the Model](#rationale-for-the-model)
 5. [Implementation of the Business Requirements](#implementation-of-the-business-requirements)
-6. [ML Business Case](#ml-business-case)
-7. [CRISP-DM Process](#crisp-dm-process)
-8. [Dashboard Design](#dashboard-design)
-9. [Unfixed Bugs](#unfixed-bugs)
-10. [Deployment](#deployment)
-11. [Technologies Used](#technologies-used)
-12. [Credits](#credits)
+6. [The Rationale to Map the Business Requirements to the Data Visualizations and ML Tasks](#the-rationale-to-map-the-business-requirements-to-the-data-visualizations-and-ml-tasks)
+7. [ML Business Case](#ml-business-case)
+8. [CRISP-DM Process](#crisp-dm-process)
+9. [Dashboard Design](#dashboard-design)
+10. [Manual Testing for Dashboard Pages](#manual-testing-for-dashboard-pages)
+11. [Unfixed Bugs](#unfixed-bugs)
+12. [Deployment](#deployment)
+13. [Technologies Used](#technologies-used)
+14. [Credits](#credits)
 
 ---
 
@@ -222,27 +226,31 @@ This structured approach ensures that every aspect of the machine learning proje
 
 ### **Page 1: Quick Project Summary**
 
+![summary-page](https://github.com/Mawadda-Kadi/mildew-detection-in-cherry-leaves/assets/151715427/b55c08fd-d102-42ef-9e2c-db212673a1e4)
+
 **Quick Project Summary**
 
 **General Information**
 Powdery mildew is a fungal disease affecting many plant species, characterized by white powdery spots on leaves and stems. Early detection is crucial to manage and control the spread of this disease effectively.
 The project dataset contains high-resolution images of cherry leaves, categorized into healthy and powdery mildew-infected samples.
-
 **Project Dataset**
 The dataset consists of images categorized into two classes: healthy cherry leaves and leaves infected with powdery mildew. The detailed examination of these leaves allows for the development of a model capable of distinguishing between the two conditions.
-
 **Business Requirements**
 The client is interested in:
 1. Visually differentiating between healthy leaves and those infected with powdery mildew.
 2. Developing a method to accurately detect the presence of powdery mildew on cherry leaves.
 
 ### **Page 2: Leaves Visualizer**
+![visualiser-page](https://github.com/Mawadda-Kadi/mildew-detection-in-cherry-leaves/assets/151715427/c04b446e-2d1f-4ef9-bb9f-1ef3c82e901f)
+
 To address the first business requirement, the interface will feature:
 - Checkbox 1: Display the average and variability images of healthy and infected leaves.
 - Checkbox 2: Show differences between average images of healthy and infected leaves.
 - Checkbox 3: Image montage to visualize a collection of leaves from each category.
 
 ### **Page 3: Powdery Mildew Detection**
+![detector-page](https://github.com/Mawadda-Kadi/mildew-detection-in-cherry-leaves/assets/151715427/6960a2f4-1db5-407d-bf9e-1236aa317fd7)
+
 For the second business requirement, create a user interface allowing users to upload cherry leaf images. The system will analyze each image and display:
 - The image.
 - A prediction statement indicating whether the leaf is infected with powdery mildew.
@@ -250,25 +258,75 @@ For the second business requirement, create a user interface allowing users to u
 - A table will list the image names and prediction results, with a download button to export this data.
 
 ### **Page 4: Project Hypothesis and Validation**
+![hypothesis-page](https://github.com/Mawadda-Kadi/mildew-detection-in-cherry-leaves/assets/151715427/3a17443e-fde3-49c1-9279-4c035a132e0c)
+
 Each project hypothesis will be outlined with a corresponding block detailing the conclusions and validation methods used to verify the hypothesis.
 
 ### **Page 5: ML Prediction Metrics**
+![performance-page](https://github.com/Mawadda-Kadi/mildew-detection-in-cherry-leaves/assets/151715427/4327e413-fa44-47a6-a93d-264a45eb69cd)
+
 This section will include:
 - Label frequencies for the training, validation, and test sets.
 - Model history, including accuracy and loss over epochs.
-- Model evaluation results with metrics such as precision_score, recall_score, f1_score, Confusion Matrix, and ROC curve.
+- Model evaluation results with metrics such as Confusion Matrix, and ROC curve.
 
 This design document framework lays out how the project's objectives align with the client's needs, detailing the tools and methods used to achieve and validate these goals.
 
 ---
 
+## Manual Testing for Dashboard Pages
+
+### Quick Project Summary
+- **Objective**: Verify that the page provides a concise overview of the project.
+- **Test Steps**:
+  1. Navigate to the "Quick Project Summary" page.
+  2. Read through the provided information to ensure it accurately represents the project's purpose and dataset details.
+  3. Check that the README link is clickable and direct to the correct page.
+
+### Leaf Visualizer
+- **Objective**: Ensure that the visualizer correctly displays images and differentiates between healthy and powdery mildew-infected leaves.
+- **Test Steps**:
+  1. Navigate to the "Leaf Visualizer" page.
+  2. Interact with each checkbox to display images:
+     - Average and variability images.
+     - Differences between average images.
+     - Image montage.
+  3. Verify that the correct images load without errors and that the distinctions are clear and accurate.
+  4. Check that the README link is clickable and direct to the correct page.
+
+### Powdery Mildew Detection
+- **Objective**: Test the functionality of the image upload and prediction feature.
+- **Test Steps**:
+  1. Navigate to the "Powdery Mildew Detection" page.
+  2. Use the file uploader to upload a cherry leaf image.
+  3. Confirm that the uploaded image displays correctly.
+  4. Check the prediction output to see if it accurately identifies the leaf's health status.
+  5. Verify that the probability score is displayed alongside the prediction.
+  6. Check that the README link is clickable and direct to the correct page.
+
+### Project Hypothesis and Validation
+- **Objective**: Check the presentation of hypotheses and their validation.
+- **Test Steps**:
+  1. Navigate to the "Project Hypothesis and Validation" page.
+  2. Review each hypothesis to ensure it is clearly stated and the validation steps are comprehensively detailed.
+  3. Confirm that all related results and conclusions are logically presented and supported by data.
+  4. Check that the README link is clickable and direct to the correct page.
+
+### ML Performance Metrics
+- **Objective**: Ensure that machine learning performance metrics are accurately reported and visualized.
+- **Test Steps**:
+  1. Navigate to the "ML Performance Metrics" page.
+  2. Examine the displayed metrics such as accuracy, precision, recall, F1-score, and the ROC curve.
+  3. Check that all visualizations (graphs and charts) render correctly and match the expected results from the model evaluation.
+  4. Validate that historical training and validation losses and accuracies are correctly plotted over epochs.
+  5. Check that the README link is clickable and direct to the correct page.
+
+All the pages and features of the dashboard have been thoroughly manually tested and have successfully passed the tests.
+
+---
+
 ## Unfixed Bug
 - Prediction Inaccuracy: When uploading an image of a healthy cherry leaf, the system incorrectly predicts it as affected by powdery mildew. This issue may stem from model overfitting or insufficient representation of healthy leaves in the training data.
-
-**Example**
-![healthy leaf](https://github.com/cla-cif/Cherry-Powdery-Mildew-Detector/assets/151715427/85712a4f-8fea-4066-8a5c-451dd3436a3d)
-
-The leaf is predicted to be powdery mildew with probability 0.84.
 
 ---
 
@@ -286,6 +344,21 @@ The steps needed to deploy this projects are as follows:
 9. Wait for the logs to run while the dependencies are installed and the app is being built.
 10. The mock terminal is then ready and accessible from a link similar to https://your-projects-name.herokuapp.com/
 11. If the slug size is too large then add large files not required for the app to the .slugignore file.
+
+### Fork the Repository
+1. Navigate to the GitHub page of the repository you want to fork.
+2. Click on the "Fork" button, usually located at the top right of the page.
+3. This action creates a copy of the repository under your GitHub account.
+
+### Clone the Repository
+1. Go to your GitHub account, find the forked repository, and open it.
+2. Click on the "Code" button, then choose "HTTPS" or "SSH" based on your preference and copy the URL provided.
+3. Open your terminal or Git Bash.
+4. Use the `git clone` command followed by the copied URL to clone the repository to your local machine. For example:
+     ```
+     git clone https://github.com/yourusername/repository-name.git
+     ```
+5. This command creates a local copy of the forked repository on your computer.
 
 ---
 
@@ -440,7 +513,7 @@ I adapted code from [Code-Institute-Org/WalkthroughProject01](https://github.com
 - Data Augmentation
 - Data Prediction: Adapted to implement model inference for evaluating individual images for signs of powdery mildew
 
-### Acknowledgements (optional)
-* Thank the people that provided support throughout this project.
+### Acknowledgements
+I would like to express my gratitude to my mentor, Mo Shami, for his guidance and support throughout this project.
 
 ---
